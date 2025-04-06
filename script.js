@@ -31,11 +31,13 @@ function drawing() {
     pixels.forEach(pixel => {
         pixel?.addEventListener("mousedown", () => {
             pixel.style.background=colorSelector.value;
+            pixel.style.borderColor = colorSelector.value;
         })
 
         pixel?.addEventListener("mouseover", () => {
             if (mouseDown) {
                 pixel.style.background = colorSelector.value;
+                pixel.style.borderColor = colorSelector.value;
             }
         })
     })
